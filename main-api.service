@@ -1,0 +1,19 @@
+[Unit]
+Description=My API Server
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /sgi/scripts/main_api.py
+WorkingDirectory=/sgi/scripts
+Restart=always
+RestartSec=3
+
+KillSignal=SIGTERM
+TimeoutStopSec=5
+
+StandardOutput=append:/sgi/log/main_api_service.log
+StandardError=append:/sgi/log/main_api_service.log
+
+[Install]
+WantedBy=multi-user.target

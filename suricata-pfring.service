@@ -1,0 +1,10 @@
+[Unit]
+Description=Suricata IDS/IPS (PFRING mode)
+After=network.target
+
+[Service]
+ExecStart=/sgi/bin/suricata -c /sgi/etc/suricata/suricata.yaml --pfring-int=ens33
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

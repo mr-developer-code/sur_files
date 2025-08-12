@@ -1,0 +1,10 @@
+[Unit]
+Description=Suricata IDS/IPS (AF-PACKET mode)
+After=network.target
+
+[Service]
+ExecStart=/sgi/bin/suricata -c /sgi/etc/suricata/suricata.yaml --af-packet
+Restart=always
+
+[Install]
+WantedBy=multi-user.target

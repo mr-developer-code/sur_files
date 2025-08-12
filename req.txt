@@ -1,0 +1,10 @@
+scapy
+ruamel.yaml
+flask
+flask_cors
+requests
+pexpect
+tensorflow==2.14.0
+watchdog
+tenseal==0.3.16
+psutil
