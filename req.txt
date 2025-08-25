@@ -9,3 +9,4 @@ watchdog
 tenseal==0.3.16
 psutil
 scikit-learn
+pandas
